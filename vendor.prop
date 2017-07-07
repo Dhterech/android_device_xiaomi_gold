@@ -1,4 +1,6 @@
 # Audio
+aaudio.mmap_exclusive_policy=2
+aaudio.mmap_policy=2
 ro.config.media_vol_default=25
 ro.config.vc_call_vol_steps=11
 vendor.audio.spkcal.copy.inhal=true
