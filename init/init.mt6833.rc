@@ -1,1 +1,2 @@
 import /vendor/etc/init/hw/init.sensor_2_0.rc
+import /vendor/etc/init/hw/init.connectivity.rc
