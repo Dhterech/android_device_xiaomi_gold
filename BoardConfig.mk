@@ -99,6 +99,9 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 # Platform
 TARGET_BOARD_PLATFORM := mt6833
 
+# SPL
+VENDOR_SECURITY_PATCH := 2025-01-01
+
 # Verified Boot
 AB_OTA_PARTITIONS += \
     vbmeta \
