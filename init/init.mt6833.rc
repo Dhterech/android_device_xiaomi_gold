@@ -572,9 +572,6 @@ on post-fs-data
     chmod 0664 /data/vendor/charge_logger/charge_logger_a.csv
     chown system system /data/vendor/charge_logger/charge_logger_a.csv
 
-on early-boot
-    verity_update_state
-
 on boot
     # Permissions
     chmod 0660 /sys/power/autosleep
