@@ -120,6 +120,9 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# SEPolicy
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
+
 # SPL
 BOOT_SECURITY_PATCH := 2025-01-01
 VENDOR_SECURITY_PATCH := 2025-01-01
