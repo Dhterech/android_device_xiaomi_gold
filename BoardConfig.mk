@@ -5,6 +5,9 @@
 
 DEVICE_PATH := device/xiaomi/gold
 
+# Enable 64-bit for non-zygote.
+ZYGOTE_FORCE_64 := true
+
 # Virtual A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
