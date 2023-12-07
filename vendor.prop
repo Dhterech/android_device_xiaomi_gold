@@ -145,3 +145,6 @@ ro.vendor.mtk_mitee_support=1
 # WiFi
 wifi.interface=wlan0
 wifi.supplicant_scan_interval=120
+
+# Zygote
+zygote.critical_window.minute=10
