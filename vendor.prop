@@ -19,6 +19,9 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 # DRM
 ro.netflix.bsp_rev=MTK6833-32817-1
 
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # Gatekeeper
 ro.hardware.gatekeeper=mitee
 
