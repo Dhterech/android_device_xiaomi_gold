@@ -14,8 +14,6 @@ on early-init
     chown system system /sys/class/power_supply/battery/input_suspend
 
 on init
-    mkdir /mnt/cd-rom 0000 system system
-
     chown root system /proc/lk_env
     chmod 0660 /proc/lk_env
 
@@ -63,8 +61,6 @@ on charger
     start vendor.light-default
 
 on fs
-    mount iso9660 loop@/vendor/etc/iAmCdRom.iso /mnt/cd-rom ro
-
     mount ext4 /dev/block/by-name/rescue /mnt/rescue noatime
     restorecon_recursive /mnt/rescue
 
