@@ -20,6 +20,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Virtual A/B
 PRODUCT_PACKAGES += \
+    com.android.hardware.boot \
+    android.hardware.boot-service.default_recovery
+
+PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script \
     update_engine \
