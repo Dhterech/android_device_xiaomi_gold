@@ -9,3 +9,6 @@ ro.config.media_vol_default=25
 ro.config.vc_call_vol_steps=11
 vendor.audio.spkcal.copy.inhal=true
 vendor.audiohal.telephonytx.type=2
+
+# DRM
+ro.netflix.bsp_rev=MTK6833-32817-1
