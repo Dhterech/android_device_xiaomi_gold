@@ -146,7 +146,9 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworkResOverlayGold \
-    SettingsResOverlayGold
+    TetheringConfigOverlay \
+    SettingsResOverlayGold \
+    WifiOverlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
