@@ -14,9 +14,6 @@ on early-init
     chown system system /sys/class/power_supply/battery/input_suspend
 
 on init
-    # Support legacy paths
-    symlink /sdcard /mnt/sdcard
-
     mkdir /mnt/cd-rom 0000 system system
 
     chown root system /proc/lk_env
@@ -72,9 +69,6 @@ on fs
     restorecon_recursive /mnt/rescue
 
 on post-fs
-    # Support legacy paths
-    symlink /sdcard /storage/sdcard0
-
     # Permissions for mediaserver
     chown root media /proc/clkmgr/mipi_test
 
