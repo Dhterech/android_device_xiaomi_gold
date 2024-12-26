@@ -1568,6 +1568,14 @@ vendor/firmware/soc2_2_ram_mcu_1_1_hdr.bin
 vendor/apex/com.google.android.widevine.nonupdatable.apex|522c687fc5fdcff4ff89ca36b57a5c03420448dc
 vendor/lib64/liboemcrypto.so
 
+# Fingerprint
+vendor/lib64/hw/fingerprint.fpc.default.so
+vendor/lib64/hw/fingerprint.goodix.default.so
+vendor/lib64/libgoodixhwfingerprint.so
+vendor/lib64/libgf_ca.so
+vendor/lib64/libgf_hal.so
+vendor/lib64/libmifpext.so
+
 # FuelGauge
 vendor/bin/fuelgauged
 vendor/bin/fuelgauged_nvram

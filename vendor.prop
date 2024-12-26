@@ -47,6 +47,10 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 # DRM
 ro.netflix.bsp_rev=MTK6833-32817-1
 
+# Fingerprint
+persist.vendor.fingerprint.type=side
+persist.vendor.fingerprint.sensor_location=1080|1065|180|local:0
+
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
