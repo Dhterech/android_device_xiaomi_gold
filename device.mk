@@ -46,6 +46,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 33
 
+# FastbootD
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
