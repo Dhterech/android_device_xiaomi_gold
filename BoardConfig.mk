@@ -40,5 +40,12 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := gold
+TARGET_NO_BOOTLOADER := true
+
+# Platform
+TARGET_BOARD_PLATFORM := mt6833
+
 # Inherit the proprietary files
 include vendor/xiaomi/gold/BoardConfigVendor.mk
