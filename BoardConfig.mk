@@ -5,6 +5,17 @@
 
 DEVICE_PATH := device/xiaomi/gold
 
+# Virtual A/B
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS := \
+    odm \
+    odm_dlkm \
+    product \
+    system \
+    system_ext \
+    vendor \
+    vendor_dlkm
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
