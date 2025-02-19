@@ -13,6 +13,9 @@ vendor.audiohal.telephonytx.type=2
 # ConsumerIR
 ro.hardware.consumerir=common
 
+# Crypto
+ro.crypto.volume.filenames_mode=aes-256-cts
+
 # DRM
 ro.netflix.bsp_rev=MTK6833-32817-1
 
