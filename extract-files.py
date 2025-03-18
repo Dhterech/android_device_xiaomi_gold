@@ -40,6 +40,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libprocessgroup_shim.so'),
     'vendor/lib64/libmtkcam_stdutils.so': blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so'),
+    'vendor/lib64/libmnl.so': blob_fixup()
+        .add_needed('libcutils.so'),
     'vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc': blob_fixup()
         .regex_replace('mediatek', 'mediatek-64b'),
 }  # fmt: skip
