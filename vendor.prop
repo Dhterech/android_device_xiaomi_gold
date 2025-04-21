@@ -12,3 +12,6 @@ vendor.audiohal.telephonytx.type=2
 
 # DRM
 ro.netflix.bsp_rev=MTK6833-32817-1
+
+# Gatekeeper
+ro.hardware.gatekeeper=mitee
