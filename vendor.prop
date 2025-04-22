@@ -10,6 +10,9 @@ ro.config.vc_call_vol_steps=11
 vendor.audio.spkcal.copy.inhal=true
 vendor.audiohal.telephonytx.type=2
 
+# ConsumerIR
+ro.hardware.consumerir=common
+
 # DRM
 ro.netflix.bsp_rev=MTK6833-32817-1
 

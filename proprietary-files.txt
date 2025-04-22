@@ -273,6 +273,9 @@ vendor/firmware/BT_FW.cfg
 vendor/firmware/soc2_2_ram_bt_1_1_hdr.bin
 vendor/firmware/soc2_2_ram_bt_1a_1_hdr.bin
 
+# ConsumerIR
+vendor/lib64/hw/consumerir.common.so
+
 # DRM (Widevine)
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
