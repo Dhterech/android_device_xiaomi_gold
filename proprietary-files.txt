@@ -1660,7 +1660,7 @@ vendor/lib64/libscltm.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 
 # Keymint
-vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee
+vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee;DISABLE_DEPS
 vendor/etc/init/android.hardware.security.keymint-service.mitee.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service.mitee.xml
 vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.mitee.xml
