@@ -49,6 +49,15 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libutils.so', 'libutils-v32.so'),
     'vendor/lib64/libmnl.so': blob_fixup()
         .add_needed('libcutils.so'),
+    (
+        "vendor/lib64/libteei_daemon_vfs.so",
+        "vendor/lib64/lib3a.flash.so",
+        "vendor/lib64/libaaa_ltm.so",
+        "vendor/lib64/lib3a.ae.stat.so",
+        "vendor/lib64/lib3a.sensors.color.so",
+        "vendor/lib64/lib3a.sensors.flicker.so",
+    ): blob_fixup()
+        .add_needed("liblog.so"),
     'vendor/lib/libvcodec_oal.so': blob_fixup()
         .clear_symbol_version('__aeabi_memcpy')
         .clear_symbol_version('__aeabi_memset')
