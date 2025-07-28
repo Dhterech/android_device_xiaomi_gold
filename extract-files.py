@@ -27,6 +27,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
     'vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee': blob_fixup()
         .add_needed('android.hardware.security.rkp-V1-ndk.so'),
+    'vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so': blob_fixup()
+        .replace_needed('libutils.so', 'libutils-v32.so'),
     ('vendor/bin/mnld', 'vendor/lib64/libcam.utils.sensorprovider.so', 'vendor/lib64/libaalservice.so'): blob_fixup()
         .add_needed('android.hardware.sensors@1.0-convert-shared.so'),
     'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so': blob_fixup()
