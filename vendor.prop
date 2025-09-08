@@ -16,6 +16,9 @@ ro.netflix.bsp_rev=MTK6833-32817-1
 # Gatekeeper
 ro.hardware.gatekeeper=mitee
 
+# GNSS
+ro.vendor.gps.chrdev=gps_drv_stp
+
 # Graphics
 ro.vendor.mtk_aal_support=1
 ro.vendor.composer_version=2.3
