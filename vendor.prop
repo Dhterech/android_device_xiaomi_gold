@@ -54,6 +54,13 @@ ro.vendor.mtk_video_hevc_enc_support=1
 vendor.media.omx=0
 vendor.mtk.vdec.waitkeyframeforplay=9
 
+# Neural Networks
+debug.mtk_tflite.target_nnapi=29
+ro.vendor.mtk_nn_support=1
+ro.vendor.mtk_nn.option=A,B,E,F,Z
+ro.vendor.mtk_nn_quant_preferred=1
+ro.vendor.mtk_nn_baseline_support=1
+
 # Surface Flinger
 debug.sf.enable_hwc_vds=0
 debug.sf.predict_hwc_composition_strategy=0
