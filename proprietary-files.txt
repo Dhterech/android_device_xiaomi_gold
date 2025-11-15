@@ -282,3 +282,44 @@ vendor/lib64/libwvhidl.so
 
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.mitee.so
+
+# Graphics
+vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
+vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
+vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/egl/libGLES_meow.so
+vendor/lib64/egl/libMEOW_data.so
+vendor/lib64/egl/libMEOW_gift.so
+vendor/lib64/egl/libMEOW_qt.so
+vendor/lib64/egl/libMEOW_trace.so
+vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
+vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
+vendor/lib64/hw/hwcomposer.mt6833.so:vendor/lib64/hw/hwcomposer.mtk_common.so;FIX_SONAME
+vendor/lib64/hw/vulkan.mali.so
+vendor/lib64/mt6833/libaiselector.so:vendor/lib64/libaiselector.so
+vendor/lib64/mt6833/libdpframework.so:vendor/lib64/libdpframework.so
+vendor/lib64/mt6833/libmtk_drvb.so:vendor/lib64/libmtk_drvb.so
+vendor/lib64/arm.graphics-V1-ndk_platform.so
+vendor/lib64/libDefaultFpsActor.so
+vendor/lib64/libFrameRecord.so
+vendor/lib64/libNoFpsActor.so
+vendor/lib64/libaal_cust.so
+vendor/lib64/libaal_key.so
+vendor/lib64/libaal_mtk.so
+vendor/lib64/libaalservice.so
+vendor/lib64/libappgamepq.so
+vendor/lib64/libcomposer_ext.so
+vendor/lib64/libgpu_aux.so
+vendor/lib64/libgpud.so
+vendor/lib64/libgpudataproducer.so
+vendor/lib64/libgralloc_extra.so
+vendor/lib64/libgralloc_metadata.so
+vendor/lib64/libgralloctypes_mtk.so
+vendor/lib64/libhdrvideo.so
+vendor/lib64/libion_mtk.so
+vendor/lib64/libion_ulit.so
+vendor/lib64/libladder.so
+vendor/lib64/libmml.so
+vendor/lib64/libOpenCL.so
+vendor/lib64/libscltm.so
+vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
