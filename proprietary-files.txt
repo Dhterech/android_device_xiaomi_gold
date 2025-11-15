@@ -272,3 +272,10 @@ vendor/lib64/libbt-vendor.so
 vendor/firmware/BT_FW.cfg
 vendor/firmware/soc2_2_ram_bt_1_1_hdr.bin
 vendor/firmware/soc2_2_ram_bt_1a_1_hdr.bin
+
+# DRM (Widevine)
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+vendor/lib64/liboemcrypto.so
+vendor/lib64/libwvhidl.so
