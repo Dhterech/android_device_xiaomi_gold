@@ -98,6 +98,11 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot-service.example_recovery \
     fastbootd
 
+# FSTab
+PRODUCT_PACKAGES += \
+    fstab.mt6833 \
+    fstab.mt6833.vendor_ramdisk
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
