@@ -1,5 +1,6 @@
 import /vendor/etc/init/hw/init.connectivity.rc
 import /vendor/etc/init/hw/init.mt6833.power.rc
+import /vendor/etc/init/hw/init.mt6833.thermal.rc
 import /vendor/etc/init/hw/init.mt6833.usb.rc
 import /vendor/etc/init/hw/init.sensor_2_0.rc
 
