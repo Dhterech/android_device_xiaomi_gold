@@ -1,0 +1,5 @@
+# Audio
+ro.config.media_vol_default=10
+ro.config.vc_call_vol_steps=11
+vendor.audio.spkcal.copy.inhal=true
+vendor.audiohal.telephonytx.type=2
