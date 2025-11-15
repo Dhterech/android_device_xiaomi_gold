@@ -129,7 +129,8 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.mt6833.rc \
-    init.recovery.mt6833.rc
+    init.recovery.mt6833.rc \
+    ueventd.mtk.rc
 
 # Keymint
 PRODUCT_COPY_FILES += \

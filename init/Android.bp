@@ -44,3 +44,10 @@ prebuilt_etc {
     relative_install_path: "init/hw",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "ueventd.mtk.rc",
+    src: "ueventd.rc",
+    filename: "ueventd.rc",
+    vendor: true,
+}
