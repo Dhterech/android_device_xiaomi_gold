@@ -61,6 +61,11 @@ ro.vendor.mtk_nn.option=A,B,E,F,Z
 ro.vendor.mtk_nn_quant_preferred=1
 ro.vendor.mtk_nn_baseline_support=1
 
+# Platform
+ro.vendor.mediatek.platform=MT6833
+ro.soc.model=MT6833
+ro.soc.manufacturer=Mediatek
+
 # Surface Flinger
 debug.sf.enable_hwc_vds=0
 debug.sf.predict_hwc_composition_strategy=0
