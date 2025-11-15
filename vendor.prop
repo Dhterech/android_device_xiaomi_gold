@@ -32,6 +32,15 @@ ro.hardware.vulkan=mali
 ro.hardware.egl=meow
 ro.opengles.version=196610
 
+# Media
+debug.mediatek.disp_decompress=1
+persist.vendor.md_c2k_cap_dep_check=0
+ro.vendor.jpeg_decode_sw_opt=1
+ro.vendor.mtk_config_max_dram_size=0x800000000
+ro.vendor.mtk_sec_video_path_support=1
+ro.vendor.mtk_video_hevc_enc_support=1
+vendor.mtk.vdec.waitkeyframeforplay=9
+
 # Surface Flinger
 debug.sf.enable_hwc_vds=0
 debug.sf.predict_hwc_composition_strategy=0

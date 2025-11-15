@@ -286,6 +286,9 @@ vendor/lib64/hw/gatekeeper.mitee.so
 # Graphics
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
+vendor/lib/libion_mtk.so
+vendor/lib/libion_ulit.so
+vendor/lib/libladder.so
 vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_data.so
@@ -298,7 +301,6 @@ vendor/lib64/hw/hwcomposer.mt6833.so:vendor/lib64/hw/hwcomposer.mtk_common.so;FI
 vendor/lib64/hw/vulkan.mali.so
 vendor/lib64/mt6833/libaiselector.so:vendor/lib64/libaiselector.so
 vendor/lib64/mt6833/libdpframework.so:vendor/lib64/libdpframework.so
-vendor/lib64/mt6833/libmtk_drvb.so:vendor/lib64/libmtk_drvb.so
 vendor/lib64/arm.graphics-V1-ndk_platform.so
 vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libFrameRecord.so
@@ -349,6 +351,37 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
+
+# Media
+vendor/bin/v3avpud
+vendor/etc/init/v3avpud.rc
+vendor/lib64/mt6833/libmtk_drvb.so:vendor/lib64/libmtk_drvb.so
+vendor/lib64/AVCSecureVdecCA.so
+vendor/lib64/VP9SecureVdecCA.so
+vendor/lib64/HEVCSecureVdecCA.so
+vendor/lib64/libAVCSecureVencCA.so
+vendor/lib64/libvcodec_oal.so
+vendor/lib64/libvcodecdrv_header_stub.so
+vendor/lib64/libvpu5.so
+vendor/lib/mt6833/libmtk_drvb.so:vendor/lib/libmtk_drvb.so
+vendor/lib/libbwc.so
+vendor/lib/libvcodecdrv_v3a.so
+vendor/lib/libvcodec_utility_v3a.so
+vendor/lib/libvcodec_oal.so
+vendor/lib/libvpudv3a_vcodec.so
+
+# Media (Codec2)
+vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
+vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc:vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc
+vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml
+vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy
+vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
+vendor/lib64/libcodec2_mtk_vdec.so
+vendor/lib64/libcodec2_mtk_venc.so
+vendor/lib64/libcodec2_mtk_c2store.so
+vendor/lib64/libcodec2_vpp_qt_plugin.so
+vendor/lib64/libcodec2_vpp_rs_plugin.so
+vendor/lib64/libformatter.so
 
 # Sensors
 vendor/lib64/hw/sensors.mt6833.so
