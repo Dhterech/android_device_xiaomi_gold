@@ -1858,6 +1858,14 @@ vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 vendor/lib64/libsensor_custom.so
 
+# Touchscreen
+vendor/firmware/focaltech_ts_fw_CSOT.bin
+vendor/firmware/focaltech_ts_fw_CSOT_mask0x01.bin
+vendor/firmware/focaltech_ts_fw_TianMa.bin
+vendor/firmware/goodix_cfg_group.bin
+vendor/firmware/goodix_test_limits_255_TM.csv
+vendor/firmware/gt9916r_ts_fw_tm.bin
+
 # Trusted Execution Environment (TEE)
 vendor/bin/miteelog
 vendor/bin/tee-supplicant
