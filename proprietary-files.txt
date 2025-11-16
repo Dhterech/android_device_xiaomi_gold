@@ -4,6 +4,7 @@
 vendor/firmware/aw87xxx_acf.bin
 vendor/firmware/awinic_params.bin
 vendor/firmware/awinic_sinwave_params.bin
+vendor/firmware/sipa.bin
 vendor/lib64/hw/audio.primary.mt6833.so
 vendor/lib64/hw/audio.r_submix.mt6833.so
 vendor/lib64/hw/awinic.audio.effect.so;FIX_SONAME
