@@ -58,7 +58,7 @@ ro.vendor.gps.chrdev=gps_drv_stp
 
 # Graphics
 ro.vendor.mtk_aal_support=1
-ro.vendor.composer_version=2.3
+ro.vendor.composer_version=2.1
 ro.vendor.display.type=oled
 ro.vendor.colorpick_adjust=true
 ro.vendor.mtk_ovl_bringup=0
