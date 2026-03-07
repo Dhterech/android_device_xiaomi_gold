@@ -132,7 +132,7 @@ PRODUCT_COPY_FILES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack-service.mediatek \
+    android.hardware.memtrack-service.mediatek-mali \
     android.hardware.graphics.composer@2.1-service
 
 PRODUCT_COPY_FILES += \
