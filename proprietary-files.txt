@@ -34,6 +34,10 @@ vendor/lib64/librt_extamp_intf.so
 vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/libxlog.so
+vendor/lib/libaedv.so
+vendor/lib/libmisight.so
+vendor/lib64/libaedv.so
+vendor/lib64/libmisight.so
 
 # Audio (Configs)
 vendor/etc/audio_param/AudioParamOptions.xml
@@ -264,6 +268,8 @@ vendor/etc/audio_param_ce/Volume_AudioParam.xml
 vendor/etc/audio_param_ce/Volume_ParamUnitDesc.xml
 
 # Bluetooth (Driver)
+vendor/lib/libbluetooth_audio_session_aidl_mtk.so
+vendor/lib64/libbluetooth_audio_session_aidl_mtk.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbt-vendor.so
 
@@ -279,6 +285,10 @@ vendor/bin/lib3a.ccu.dm
 vendor/bin/lib3a.ccu.pm
 vendor/firmware/lib3a.ccu
 vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so
+vendor/lib64/hw/vendor.mediatek.hardware.camera.atms_aidl@1.0-impl.so
+vendor/lib64/hw/vendor.mediatek.hardware.camera.bgservice_aidl@1.0-impl.so
+vendor/lib64/hw/vendor.mediatek.hardware.camera.isphal_aidl@1.0-impl.so
+vendor/lib64/hw/vendor.mediatek.hardware.camera.postproc_aidl@1.0-impl.so
 vendor/lib64/lib3a.ae.core.so
 vendor/lib64/lib3a.ae.so
 vendor/lib64/lib3a.af.core.so
@@ -302,6 +312,7 @@ vendor/lib64/lib3a.sensors.color.so;DISABLE_CHECKELF
 vendor/lib64/lib3a.sensors.flicker.so;DISABLE_CHECKELF
 vendor/lib64/libaaa_ltm.so
 vendor/lib64/libaaa_ltmx.so
+vendor/lib64/libMiVideoFilter.so
 vendor/lib64/libJpgEncPipe.so
 vendor/lib64/libSQLiteModule_VER_ALL.so
 vendor/lib64/libSonyIMX230PdafLibrary.so
@@ -338,6 +349,8 @@ vendor/lib64/libcam.hal3a.v3.ai3a.so
 vendor/lib64/libcam.hal3a.v3.awb.so
 vendor/lib64/libcam.hal3a.v3.fsmgr.so
 vendor/lib64/libcam.hal3a.v3.lscMgr.so
+vendor/lib/libcam.halsensor.hwintegration_mt6833.so
+vendor/lib64/libcam.halsensor.hwintegration_mt6833.so
 vendor/lib64/libcam.hal3a.v3.lsctbl.50.so
 vendor/lib64/libcam.hal3a.v3.nvram.50.so
 vendor/lib64/libcam.hal3a.v3.platform.so
@@ -1236,6 +1249,8 @@ vendor/lib64/libCamera_sc202pcssunnymacromipiraw_Scene_Preview_4k.so
 vendor/lib64/libCamera_sc202pcssunnymacromipiraw_Scene_Preview_ZSD_Flash.so
 vendor/lib64/libCamera_sc202pcssunnymacromipiraw_Video_1080.so
 vendor/lib64/libCamera_sc202pcssunnymacromipiraw_Video_4k.so
+vendor/lib64/libmtkcam.debugwrapper.so
+vendor/lib64/libmtkcam_hal_aidl_provider.so
 vendor/lib64/gc16b3_aac_front_mipi_raw_IdxMgr.so
 vendor/lib64/gc16b3_aac_front_mipi_raw_cn_IdxMgr.so
 vendor/lib64/gc16b3_sunny_front_mipi_raw_IdxMgr.so
@@ -1283,6 +1298,10 @@ vendor/lib64/sc202pcs_sunny_macro_mipi_raw_tuning.so
 vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
+vendor/lib64/vendor.mediatek.hardware.camera.atms-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.camera.bgservice-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.camera.postproc-V1-ndk.so
 
 # Camera (configs)
 vendor/etc/camera/asd/asdcam_108M+2M_1/sceneDetection.xml
@@ -1552,9 +1571,11 @@ vendor/etc/init/android.hardware.gnss-service.mediatek.rc
 vendor/etc/init/mtk_agpsd_p.rc
 vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/nss-mtk.xml
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
+vendor/lib64/hw/vendor.mediatek.hardware.gnss-impl.so
 vendor/lib64/hw/gps.default.so
 vendor/lib64/libDR.so
 vendor/lib64/libmnl.so
+vendor/lib64/vendor.mediatek.hardware.lbs-V1-ndk.so
 
 # GNSS (Configs)
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_Mexico.xml
@@ -1595,8 +1616,10 @@ vendor/lib64/mt6833/libdpframework.so:vendor/lib64/libdpframework.so
 vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libFrameRecord.so
 vendor/lib64/libNoFpsActor.so
+vendor/lib/libaal_sec.so
 vendor/lib64/libaal_cust.so
 vendor/lib64/libaal_key.so
+vendor/lib64/libaal_sec.so
 vendor/lib64/libaalservice.so
 vendor/lib64/libappgamepq.so
 vendor/lib64/libcomposer_ext.so
@@ -1613,6 +1636,9 @@ vendor/lib64/libladder.so
 vendor/lib64/libmml.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libscltm.so
+vendor/lib64/libsilkybrightnesscore.so
+vendor/lib/vendor.mediatek.hardware.composer_ext-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.composer_ext-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 
 # Keymint
@@ -1621,9 +1647,21 @@ vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.mitee.xm
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.mitee.xml
 
 # Picture Quality
+vendor/lib/libpq_sec.so
+vendor/lib/libpqhdrmetaparser.so
+vendor/lib/libpqsharememory.so
+vendor/lib/libpqtuning.so
+vendor/lib/vendor.mediatek.hardware.pq_aidl-V2-ndk.so
+vendor/lib/vendor.mediatek.hardware.pq_aidl-V4-ndk.so
 vendor/lib64/libpq_cust_base.so
+vendor/lib64/libpq_sec.so
 vendor/lib64/libpqframework.so
+vendor/lib64/libpqhdrmetaparser.so
 vendor/lib64/libpqparamparser.so
+vendor/lib64/libpqsharememory.so
+vendor/lib64/libpqtuning.so
+vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so
+vendor/lib64/vendor.mediatek.hardware.pq_aidl-V4-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.10.so
@@ -1656,25 +1694,37 @@ vendor/lib/libvcodec_oal.so
 vendor/lib/libvpudv3a_vcodec.so
 
 # Media (Codec2)
+vendor/lib/libcodec2_fsr.so
+vendor/lib/libcodec2_vpp_fa_plugin.so
+vendor/lib/libcodec2_vpp_mi_plugin.so
+vendor/lib64/libcodec2_fsr.so
 vendor/lib64/libcodec2_mtk_vdec.so
 vendor/lib64/libcodec2_mtk_venc.so
 vendor/lib64/libcodec2_mtk_c2store.so
+vendor/lib64/libcodec2_vpp_fa_plugin.so
+vendor/lib64/libcodec2_vpp_mi_plugin.so
 vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
 vendor/lib64/libformatter.so
 
 # MMAgent
+vendor/lib/vendor.mediatek.hardware.mmagent-V1-ndk.so
 vendor/lib64/libmmagent.so
+vendor/lib64/vendor.mediatek.hardware.mmagent-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
 
 # MMS
+vendor/lib/vendor.mediatek.hardware.mms-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mms-V1-ndk.so
 
 # NetD Agent
 vendor/bin/netdagent
 vendor/etc/init/netdagent.rc
 vendor/lib64/libforkexecwrap.so
 vendor/lib64/libifcutils_mtk.so
+vendor/lib/vendor.mediatek.hardware.netdagent-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.netdagent-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
 # Neural Networks
@@ -1697,6 +1747,7 @@ vendor/lib64/libnvram.so
 vendor/lib64/libnvram_sec.so
 
 # Power
+vendor/lib64/vendor.mediatek.hardware.mtkpower-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 
 # Radio
@@ -1738,6 +1789,23 @@ vendor/lib64/libtrm.so
 vendor/lib64/libvia-ril.so
 vendor/lib64/libviamipc-ril.so
 vendor/lib64/libwpfa.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.assist-V2-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.atci-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.cap-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.data-V3-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.dch-V2-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.em-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.ims-V2-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.messaging-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.modem-V3-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.mwi-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.network-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.rcs-V2-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.rsu-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.se-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.sim-V2-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.smartratswitch-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.voice-V1-ndk.so
 
 # Radio (Config)
 vendor/etc/ecc_list.xml
