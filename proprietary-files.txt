@@ -269,9 +269,11 @@ vendor/etc/audio_param_ce/Volume_ParamUnitDesc.xml
 
 # Bluetooth (Driver)
 vendor/lib/libbluetooth_audio_session_aidl_mtk.so
+vendor/lib/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
 vendor/lib64/libbluetooth_audio_session_aidl_mtk.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbt-vendor.so
+vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
 
 # Bluetooth (Firmware)
 vendor/firmware/BT_FW.cfg
@@ -371,6 +373,7 @@ vendor/lib64/libcam.iopipe.so
 vendor/lib64/libcam.pdtblgen.so
 vendor/lib64/libcam.utils.sensorprovider.so;DISABLE_CHECKELF
 vendor/lib64/libcam.vhdr.so
+vendor/lib64/libchromanr.so
 vendor/lib64/libcamalgo.3dnr.so
 vendor/lib64/libcamalgo.dngop.so
 vendor/lib64/libcamalgo.eis.so
@@ -1250,7 +1253,11 @@ vendor/lib64/libCamera_sc202pcssunnymacromipiraw_Scene_Preview_ZSD_Flash.so
 vendor/lib64/libCamera_sc202pcssunnymacromipiraw_Video_1080.so
 vendor/lib64/libCamera_sc202pcssunnymacromipiraw_Video_4k.so
 vendor/lib64/libmtkcam.debugwrapper.so
+vendor/lib64/libmtkcam_hal_aidl_common.so
+vendor/lib64/libmtkcam_hal_aidl_device.so
 vendor/lib64/libmtkcam_hal_aidl_provider.so
+vendor/lib64/libmtkcam_hal_aidl_utils.so
+vendor/lib64/libmtkisp_metadata_v3.so
 vendor/lib64/gc16b3_aac_front_mipi_raw_IdxMgr.so
 vendor/lib64/gc16b3_aac_front_mipi_raw_cn_IdxMgr.so
 vendor/lib64/gc16b3_sunny_front_mipi_raw_IdxMgr.so
@@ -1575,6 +1582,7 @@ vendor/lib64/hw/vendor.mediatek.hardware.gnss-impl.so
 vendor/lib64/hw/gps.default.so
 vendor/lib64/libDR.so
 vendor/lib64/libmnl.so
+vendor/lib64/vendor.mediatek.hardware.gnss-V2-ndk.so
 vendor/lib64/vendor.mediatek.hardware.lbs-V1-ndk.so
 
 # GNSS (Configs)
@@ -1651,6 +1659,8 @@ vendor/lib/libpq_sec.so
 vendor/lib/libpqhdrmetaparser.so
 vendor/lib/libpqsharememory.so
 vendor/lib/libpqtuning.so
+vendor/lib/libpqxmlparser.so
+vendor/lib/libsdrparser.so
 vendor/lib/vendor.mediatek.hardware.pq_aidl-V2-ndk.so
 vendor/lib/vendor.mediatek.hardware.pq_aidl-V4-ndk.so
 vendor/lib64/libpq_cust_base.so
@@ -1660,6 +1670,8 @@ vendor/lib64/libpqhdrmetaparser.so
 vendor/lib64/libpqparamparser.so
 vendor/lib64/libpqsharememory.so
 vendor/lib64/libpqtuning.so
+vendor/lib64/libpqxmlparser.so
+vendor/lib64/libsdrparser.so
 vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq_aidl-V4-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
