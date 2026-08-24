@@ -1608,9 +1608,12 @@ vendor/etc/gnss/agps_profiles_conf2.xml
 vendor/etc/slp_conf
 
 # Graphics
+vendor/lib/libged.so
+vendor/lib/libgralloc_extra.so
 vendor/lib/libion_mtk.so
 vendor/lib/libion_ulit.so
 vendor/lib/libladder.so
+vendor/lib/mt6833/libmml.so:vendor/lib/libmml.so
 vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_data.so
@@ -1852,6 +1855,7 @@ vendor/firmware/goodix_test_limits_255_TM.csv
 vendor/firmware/gt9916r_ts_fw_tm.bin
 
 # Trusted Execution Environment (TEE)
+vendor/lib/libgz_uree.so
 vendor/bin/miteelog
 vendor/bin/tee-supplicant
 vendor/etc/init/miteelog.rc
