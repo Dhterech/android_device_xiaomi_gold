@@ -62,6 +62,12 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('__aeabi_memcpy')
         .clear_symbol_version('__aeabi_memset')
         .clear_symbol_version('__gnu_Unwind_Find_exidx'),
+
+    # From device_xiaomi_duchamp
+        'vendor/lib64/libmtkcam_hal_aidl_common.so': blob_fixup()
+        .replace_needed('android.hardware.camera.common-V2-ndk.so', 'android.hardware.camera.common-V1-ndk.so'),
+
+
 }  # fmt: skip
 
 module = ExtractUtilsModule(
