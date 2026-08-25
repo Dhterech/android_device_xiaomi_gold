@@ -138,8 +138,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
 # Graphics
+# NOTE: removed -mali prefix
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack-service.mediatek-mali \
+    android.hardware.memtrack-service.mediatek \
     android.hardware.graphics.composer@2.1-service
 
 PRODUCT_COPY_FILES += \
@@ -188,8 +189,9 @@ PRODUCT_PACKAGES += \
 # Media
 $(call soong_config_set_bool,android_hardware_mediatek_codec2,link_v33_libstagefright_foundation,true)
 
-PRODUCT_PACKAGES += \
-    android.hardware.media.c2-mtk-service
+# not compiling, removing for now
+#PRODUCT_PACKAGES += \
+#    android.hardware.media.c2-mtk-service
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -226,8 +228,9 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Radio
+# NOTE: Renamed from vendor_mdota_symlink
 PRODUCT_PACKAGES += \
-    vendor_mdota_symlink
+    mdota_symlink
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
