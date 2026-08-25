@@ -1840,6 +1840,8 @@ vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 
 # Sensors
+vendor/lib64/android.frameworks.sensorservice-V1-ndk.so:vendor/lib64/android.frameworks.sensorservice-V1-ndk-vendor-compat.so;FIX_SONAME
+vendor/lib64/android.hardware.sensors-V2-ndk.so:vendor/lib64/android.hardware.sensors-V2-ndk-vendor-compat.so;FIX_SONAME
 vendor/lib64/hw/sensors.mt6833.so
 vendor/lib64/libhfmanager.so
 vendor/lib64/libhfmanagerwrapper.so

@@ -36,8 +36,27 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libutils.so', 'libutils-v32.so'),
     'vendor/bin/hw/mtkfusionrild': blob_fixup()
         .add_needed('libutils-v32.so'),
-    ('vendor/bin/mnld', 'vendor/lib64/libcam.utils.sensorprovider.so', 'vendor/lib64/libaalservice.so'): blob_fixup()
+    #('vendor/bin/mnld', 'vendor/lib64/libcam.utils.sensorprovider.so', 'vendor/lib64/libaalservice.so'): blob_fixup()
+    #    .add_needed('android.hardware.sensors@1.0-convert-shared.so'),
+    (
+        'vendor/bin/mnld',
+        'vendor/lib64/libcam.utils.sensorprovider.so',
+        'vendor/lib64/libaalservice.so',
+    ): blob_fixup()
+        .replace_needed(
+            'android.frameworks.sensorservice-V1-ndk.so',
+            'android.frameworks.sensorservice-V1-ndk-vendor-compat.so',
+        )
+        .replace_needed(
+            'android.hardware.sensors-V2-ndk.so',
+            'android.hardware.sensors-V2-ndk-vendor-compat.so',
+        )
         .add_needed('android.hardware.sensors@1.0-convert-shared.so'),
+    'vendor/lib64/android.frameworks.sensorservice-V1-ndk-vendor-compat.so': blob_fixup()
+        .replace_needed(
+            'android.hardware.sensors-V2-ndk.so',
+            'android.hardware.sensors-V2-ndk-vendor-compat.so',
+        ),
     'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so': blob_fixup()
         .add_needed('android.hardware.sensors@1.0-convert-shared.so')
         .replace_needed('libutils.so', 'libutils-v32.so'),
@@ -67,7 +86,39 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libmtkcam_hal_aidl_common.so': blob_fixup()
         .replace_needed('android.hardware.camera.common-V2-ndk.so', 'android.hardware.camera.common-V1-ndk.so'),
 
+    # From android_device_motorola_mt6768-common
+    (
+        'vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek',
+        'vendor/lib64/egl/libGLES_mali.so',
+        'vendor/lib64/hw/android.hardware.graphics.allocator-V2-mediatek.so',
+        'vendor/lib64/hw/mapper.mediatek.so',
+        'vendor/lib64/libcodec2_fsr.so',
+        'vendor/lib64/libgpud.so',
+        'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so',
+        'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V4-ndk.so',
+    ): blob_fixup()
+        .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
+    'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V7-ndk.so': blob_fixup()
+        .replace_needed('android.hardware.graphics.common-V4-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
 
+    # From device_xiaomi_duchamp, adapted because we V5 - V7
+        ('vendor/lib64/libmtkcam_grallocutils.so',
+     'vendor/lib64/libmtkcam_grallocutils_aidlv1helper.so'): blob_fixup()
+        .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so')
+        .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
+    
+    ('vendor/lib/libcodec2_fsr.so',
+    'vendor/lib/vendor.mediatek.hardware.pq_aidl-V2-ndk.so',
+    'vendor/lib/vendor.mediatek.hardware.pq_aidl-V4-ndk.so',
+    'vendor/lib64/egl/libGLES_mali.so',
+    'vendor/lib64/libcodec2_fsr.so',
+    'vendor/lib64/libgpud.so',
+    'vendor/lib64/libmtkcam_grallocutils.so',
+    'vendor/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so',
+    'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so',
+    'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V4-ndk.so'): blob_fixup()
+            .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
+    #    .replace_needed('libui.so', 'libui-v34.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
