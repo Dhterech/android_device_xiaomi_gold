@@ -27,11 +27,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
     ('vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron', 'vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
-    'vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee': blob_fixup()
-        .add_needed('android.hardware.security.rkp-V3-ndk.so')
-        .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so', 'android.hardware.security.keymint-V3-ndk.so')
-        .replace_needed('android.hardware.security.sharedsecret-V1-ndk_platform.so', 'android.hardware.security.sharedsecret-V1-ndk.so')
-        .replace_needed('android.hardware.security.secureclock-V1-ndk_platform.so', 'android.hardware.security.secureclock-V1-ndk.so'),
     'vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so': blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so'),
     'vendor/bin/hw/mtkfusionrild': blob_fixup()
@@ -100,6 +95,13 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
     'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V7-ndk.so': blob_fixup()
         .replace_needed('android.hardware.graphics.common-V4-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
+
+    # From device_xiaomi_duchamp
+    'vendor/bin/hw/android.hardware.security.keymint@3.0-service.mitee': blob_fixup()
+    .replace_needed(
+        'android.hardware.security.keymint-V3-ndk.so',
+        'android.hardware.security.keymint-V4-ndk.so',
+    ),
 
     # From device_xiaomi_duchamp, adapted because we V5 - V7
         ('vendor/lib64/libmtkcam_grallocutils.so',
