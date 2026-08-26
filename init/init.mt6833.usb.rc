@@ -28,6 +28,9 @@ on early-boot
     setprop sys.usb.mtp.batchcancel true
     symlink /config/usb_gadget/g1/configs/b.1 /config/usb_gadget/g1/os_desc/b.1
 
+    # USB controller
+    setprop sys.usb.controller "musb-hdrc"
+
     # mtp function
     mkdir /config/usb_gadget/g1/functions/mtp.gs0
 
