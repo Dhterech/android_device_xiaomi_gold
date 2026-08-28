@@ -41,6 +41,14 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.project.rc",
     src: "init.project.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.project.recovery.rc",
+    src: "init.project.rc",
+    filename: "init.project.rc",
     relative_install_path: "init",
     recovery: true,
 }
@@ -67,8 +75,43 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.connectivity.common.rc",
+    src: "init.connectivity.common.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init_connectivity.rc",
+    src: "init_connectivity.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "ueventd.mtk.rc",
     src: "ueventd.rc",
     filename: "ueventd.rc",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.cgroup.rc",
+    src: "init.cgroup.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.modem.rc",
+    src: "init.modem.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mtkgki.rc",
+    src: "init.mtkgki.rc",
+    relative_install_path: "init/hw",
     vendor: true,
 }

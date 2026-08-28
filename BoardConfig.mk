@@ -5,17 +5,10 @@
 
 DEVICE_PATH := device/xiaomi/gold
 
-# Enable 64-bit for non-zygote.
-ZYGOTE_FORCE_64 := true
-
-# Force any prefer32 targets to be compiled as 64 bit.
-IGNORE_PREFER32_ON_DEVICE := true
-
 # Virtual A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
     dtbo \
-    odm \
     odm_dlkm \
     product \
     system \
@@ -44,12 +37,14 @@ AB_OTA_PARTITIONS += \
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
+BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 67108864
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
+BOARD_BOOTCONFIG += androidboot.selinux=permissive
 
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_OFFSET := 0x00008000
@@ -72,25 +67,47 @@ TARGET_BOOTLOADER_BOARD_NAME := gold
 TARGET_NO_BOOTLOADER := true
 
 # Display
-TARGET_SCREEN_DENSITY := 440
+TARGET_SCREEN_DENSITY := 480
 
 # Kernel
 TARGET_KERNEL_NO_GCC := true
+TARGET_KERNEL_VERSION := 6.6
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz
-TARGET_KERNEL_SOURCE := $(DEVICE_PATH)-kernel/headers/
+TARGET_KERNEL_SOURCE := kernel/xiaomi/gold-6.6
 TARGET_KERNEL_CONFIG := \
-	gki_defconfig
+	gki_defconfig \
+	gold.config
 
-# Kernel (Prebuilt)
+# Bootable transition bundle. Keep the kernel, DTB, DTBO and vendor modules
+# from the same 6.6.118 Gold OTA until the in-tree MT6833 clock/power/module
+# dependency closure is complete. TARGET_KERNEL_SOURCE above deliberately
+# points at the real 6.6 port instead of the old nonexistent headers path.
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/dtb
 BOARD_PREBUILT_SYSTEM_DLKMIMAGE := $(DEVICE_PATH)-kernel/system_dlkm.img
 
-BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)-kernel/vendor_dlkm/*.ko)
+# These optional MIUI scheduling modules were built for 6.6.30 and are rejected
+# by the 6.6.118 kernel. Binder itself is provided by GKI; binder_prio remains.
+GOLD_INCOMPATIBLE_VENDOR_KERNEL_MODULES := \
+    binder_gki.ko \
+    millet_binder.ko \
+    millet_core.ko \
+    millet_hs.ko \
+    millet_oem_cgroup.ko \
+    millet_pkg.ko \
+    millet_sig.ko
+
+BOARD_VENDOR_KERNEL_MODULES := $(filter-out \
+    $(addprefix $(DEVICE_PATH)-kernel/vendor_dlkm/,$(GOLD_INCOMPATIBLE_VENDOR_KERNEL_MODULES)), \
+    $(wildcard $(DEVICE_PATH)-kernel/vendor_dlkm/*.ko))
+
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)-kernel/modules.load.vendor))
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(filter-out \
+    $(GOLD_INCOMPATIBLE_VENDOR_KERNEL_MODULES), \
+    $(BOARD_VENDOR_KERNEL_MODULES_LOAD))
 
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)-kernel/vendor_ramdisk/*.ko)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)-kernel/modules.load.vendor_ramdisk))
@@ -113,11 +130,9 @@ BOARD_MEDIATEK_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     system_dlkm \
     product \
     vendor \
-    odm \
     vendor_dlkm \
     odm_dlkm
 
-BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_ODM_DLKMIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_SYSTEM_DLKMIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := erofs
@@ -127,7 +142,6 @@ BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 
-TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_ODM_DLKM := odm_dlkm
 TARGET_COPY_OUT_SYSTEM_DLKM := system_dlkm
 TARGET_COPY_OUT_VENDOR := vendor
@@ -139,6 +153,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6833
+BOARD_SHIPPING_API_LEVEL := 30
 
 # Props
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
@@ -152,6 +167,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 
 # SEPolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # SPL
 BOOT_SECURITY_PATCH := 2026-02-01
@@ -201,7 +217,7 @@ BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
-BOARD_AVB_VBMETA_VENDOR := vendor odm
+BOARD_AVB_VBMETA_VENDOR := vendor vendor_dlkm odm_dlkm
 BOARD_AVB_VBMETA_VENDOR_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_VBMETA_VENDOR_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)

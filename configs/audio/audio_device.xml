@@ -54,7 +54,6 @@
             <kctl name="HPL Mux" value="Open" />
             <kctl name="HPR Mux" value="Open" />
         </path>
-        <!--N17 code for HQ-293960 by zhouchenghua at 2023/4/27 start-->
         <!--external_speaker output-->
         <path name="ext_speaker_output" value="turnon">
             <kctl name="Ext_Speaker_Amp Switch" value="1" />
@@ -67,7 +66,6 @@
             <kctl name="aw87xxx_profile_switch_0" value="Off" />
             <kctl name="Ext_Speaker_Amp Switch" value="0" />
         </path>
-        <!--N17 code for HQ-293960 by zhouchenghua at 2023/4/27 end-->
         <!--mic setting-->
         <path name="builtin_Mic_Mic1" value="turnon">
             <kctl name="MISO0_MUX" value="UL1_CH1" />
@@ -1148,6 +1146,7 @@
             <kctl name="MISO1_MUX" value="UL1_CH2" />
             <kctl name="UL_SRC_MUX" value="AMIC" />
             <kctl name="UL2_SRC_MUX" value="AMIC" />
+            <kctl name="usb_call_echo_ref" value="0" />
         </path>
         <path name="MD1_TO_CAPTURE2" value="turnon">
             <kctl name="UL2_CH1 PCM_2_CAP_CH1" value="1" />

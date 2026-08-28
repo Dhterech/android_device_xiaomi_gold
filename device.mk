@@ -5,6 +5,9 @@
 
 DEVICE_PATH := device/xiaomi/gold
 
+# Keep authentication out of the way while the new firmware is being brought up.
+WITH_ADB_INSECURE := true
+
 # Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
@@ -140,8 +143,7 @@ PRODUCT_COPY_FILES += \
 # Graphics
 # NOTE: removed -mali prefix
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack-service.mediatek \
-    android.hardware.graphics.composer@2.1-service
+    android.hardware.memtrack-service.mediatek
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
@@ -161,8 +163,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.mt6833.rc \
     init.project.rc \
+    init.project.recovery.rc \
     init.recovery.mt6833.rc \
     ueventd.mtk.rc
+
+
+# ?
+PRODUCT_PACKAGES += \
+    init.mtkgki.rc \
+    init.cgroup.rc
 
 # Keymint
 PRODUCT_PACKAGES += \
@@ -188,10 +197,7 @@ PRODUCT_PACKAGES += \
 
 # Media
 $(call soong_config_set_bool,android_hardware_mediatek_codec2,link_v33_libstagefright_foundation,true)
-
-# not compiling, removing for now
-#PRODUCT_PACKAGES += \
-#    android.hardware.media.c2-mtk-service
+# The matching 64-bit stock Codec2 service is supplied by gold-vendor.mk.
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -230,7 +236,8 @@ PRODUCT_COPY_FILES += \
 # Radio
 # NOTE: Renamed from vendor_mdota_symlink
 PRODUCT_PACKAGES += \
-    mdota_symlink
+    mdota_symlink \
+    init.modem.rc
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
@@ -269,8 +276,8 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.mediatek
 
-PRODUCT_PACKAGES += \
-    init.mt6833.thermal.rc
+#PRODUCT_PACKAGES += \
+    #init.mt6833.thermal.rc
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
@@ -289,7 +296,7 @@ PRODUCT_COPY_FILES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.gold
+    android.hardware.vibrator-service.mediatek
 
 # WiFi
 PRODUCT_PACKAGES += \
@@ -299,7 +306,9 @@ PRODUCT_PACKAGES += \
     libwifi-hal-wrapper
 
 PRODUCT_PACKAGES += \
-    init.connectivity.rc
+    init.connectivity.rc \
+    init.connectivity.common.rc \
+    init_connectivity.rc
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi) \

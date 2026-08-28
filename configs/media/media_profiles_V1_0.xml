@@ -72,9 +72,7 @@
      This file is used to declare the multimedia profiles and capabilities
      on an android-powered device.
 -->
-  <!--N17 code for HQ-297220 by zhaoyue at 2023/05/31 start-->
-  <!--N17 code for HQ-290908 by zhaoyue at 2023/06/02 start-->
-  <!--N17 code for HQ-300838 by wuzhenyue at 2023/06/26 start-->
+  <!--N17-V code for HQ-412106 by p-luowenhao3 at 2023/08/20 start-->
 <MediaSettings>
     <!-- Each camcorder profile defines a set of predefined configuration parameters -->
     <CamcorderProfiles cameraId="0">
@@ -112,7 +110,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="qvga" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="320"
                    height="240"
@@ -123,7 +121,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="cif" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1250000"
                    width="352"
                    height="288"
@@ -167,7 +165,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapselow" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="176"
                    height="144"
@@ -189,7 +187,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="176"
                    height="144"
@@ -200,7 +198,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapseqvga" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="320"
                    height="240"
@@ -211,7 +209,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapsecif" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1250000"
                    width="352"
                    height="288"
@@ -521,7 +519,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="qvga" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="320"
                    height="240"
@@ -532,7 +530,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="cif" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1250000"
                    width="352"
                    height="288"
@@ -576,7 +574,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapselow" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="176"
                    height="144"
@@ -598,7 +596,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="176"
                    height="144"
@@ -609,7 +607,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapseqvga" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="320"
                    height="240"
@@ -620,7 +618,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapsecif" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1250000"
                    width="352"
                    height="288"
@@ -769,7 +767,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="qvga" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="320"
                    height="240"
@@ -780,7 +778,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="cif" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1250000"
                    width="352"
                    height="288"
@@ -835,7 +833,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapselow" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="176"
                    height="144"
@@ -857,7 +855,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="176"
                    height="144"
@@ -868,7 +866,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapseqvga" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="320"
                    height="240"
@@ -879,7 +877,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapsecif" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1250000"
                    width="352"
                    height="288"
@@ -951,7 +949,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="qvga" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="320"
                    height="240"
@@ -962,7 +960,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="cif" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1250000"
                    width="352"
                    height="288"
@@ -1017,7 +1015,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapselow" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="176"
                    height="144"
@@ -1039,7 +1037,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="176"
                    height="144"
@@ -1050,7 +1048,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapseqvga" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="320"
                    height="240"
@@ -1061,7 +1059,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapsecif" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1250000"
                    width="352"
                    height="288"
@@ -1133,7 +1131,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="qvga" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="320"
                    height="240"
@@ -1144,7 +1142,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="cif" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1250000"
                    width="352"
                    height="288"
@@ -1188,7 +1186,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapselow" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="176"
                    height="144"
@@ -1210,7 +1208,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="176"
                    height="144"
@@ -1221,7 +1219,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapseqvga" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="320"
                    height="240"
@@ -1232,7 +1230,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapsecif" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1250000"
                    width="352"
                    height="288"
@@ -1315,7 +1313,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="qvga" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="320"
                    height="240"
@@ -1326,7 +1324,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="cif" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1250000"
                    width="352"
                    height="288"
@@ -1370,7 +1368,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapselow" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="176"
                    height="144"
@@ -1392,7 +1390,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="176"
                    height="144"
@@ -1403,7 +1401,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapseqvga" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="320"
                    height="240"
@@ -1414,7 +1412,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapsecif" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1250000"
                    width="352"
                    height="288"
@@ -1497,7 +1495,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="qvga" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="320"
                    height="240"
@@ -1508,7 +1506,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="cif" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1250000"
                    width="352"
                    height="288"
@@ -1552,7 +1550,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapselow" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="176"
                    height="144"
@@ -1574,7 +1572,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="176"
                    height="144"
@@ -1585,7 +1583,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapseqvga" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1000000"
                    width="320"
                    height="240"
@@ -1596,7 +1594,7 @@
                    channels="2" />
         </EncoderProfile>
         <EncoderProfile quality="timelapsecif" fileFormat="mp4" duration="30">
-            <Video codec="m4v"
+            <Video codec="h264"
                    bitRate="1250000"
                    width="352"
                    height="288"
@@ -1656,12 +1654,12 @@
         minFrameWidth="176" maxFrameWidth="1920"
         minFrameHeight="144" maxFrameHeight="1080"
         minFrameRate="15" maxFrameRate="30" />
-    <VideoEncoderCap name="h263" enabled="true"
+    <VideoEncoderCap name="h263" enabled="false"
         minBitRate="64000" maxBitRate="2000000"
         minFrameWidth="176" maxFrameWidth="640"
         minFrameHeight="144" maxFrameHeight="480"
         minFrameRate="15" maxFrameRate="30" />
-    <VideoEncoderCap name="m4v" enabled="true"
+    <VideoEncoderCap name="m4v" enabled="false"
         minBitRate="64000" maxBitRate="4000000"
         minFrameWidth="176" maxFrameWidth="640"
         minFrameHeight="144" maxFrameHeight="480"
@@ -1691,10 +1689,7 @@
         minBitRate="5525" maxBitRate="12200"
         minSampleRate="8000" maxSampleRate="8000"
         minChannels="1" maxChannels="1" />
-  <!--N17 code for HQ-300838 by wuzhenyue at 2023/06/26 end-->
-  <!--N17 code for HQ-290908 by zhaoyue at 2023/06/02 end-->
-  <!--N17 code for HQ-297220 by zhaoyue at 2023/05/31 end-->
-
+  <!--N17 code for HQ-412106 by p-luowenhao3 at 2023/08/20 end-->
     <!--
         FIXME:
         We do not check decoder capabilities at present

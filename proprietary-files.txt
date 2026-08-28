@@ -1608,6 +1608,10 @@ vendor/etc/gnss/agps_profiles_conf2.xml
 vendor/etc/slp_conf
 
 # Graphics
+vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek
+vendor/bin/hw/android.hardware.graphics.composer@3.3-service
+vendor/etc/init/android.hardware.graphics.allocator-V2-service-mediatek.rc
+vendor/etc/init/android.hardware.graphics.composer@3.3-service.rc
 vendor/lib/libged.so
 vendor/lib/libgralloc_extra.so
 vendor/lib/libion_mtk.so
@@ -1620,7 +1624,10 @@ vendor/lib64/egl/libMEOW_data.so
 vendor/lib64/egl/libMEOW_gift.so
 vendor/lib64/egl/libMEOW_qt.so
 vendor/lib64/egl/libMEOW_trace.so
+vendor/lib64/arm.graphics-V5-ndk.so
+vendor/lib64/hw/android.hardware.graphics.allocator-V2-mediatek.so
 vendor/lib64/hw/hwcomposer.mt6833.so:vendor/lib64/hw/hwcomposer.mtk_common.so;FIX_SONAME
+vendor/lib64/hw/mapper.mediatek.so
 vendor/lib64/hw/vulkan.mali.so
 vendor/lib64/mt6833/libaiselector.so:vendor/lib64/libaiselector.so
 vendor/lib64/mt6833/libdpframework.so:vendor/lib64/libdpframework.so
@@ -1653,6 +1660,7 @@ vendor/lib64/vendor.mediatek.hardware.composer_ext-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 
 # Keymint
+system/lib64/android.hardware.security.keymint-V3-ndk.so:vendor/lib64/android.hardware.security.keymint-V3-ndk-prebuilt.so;FIX_SONAME
 vendor/bin/hw/android.hardware.security.keymint@3.0-service.mitee
 vendor/etc/init/android.hardware.security.keymint.mitee@3.0-service.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service.mitee.xml
@@ -1711,6 +1719,9 @@ vendor/lib/libvcodec_oal.so
 vendor/lib/libvpudv3a_vcodec.so
 
 # Media (Codec2)
+vendor/bin/hw/android.hardware.media.c2-mediatek-64b:vendor/bin/hw/android.hardware.media.c2-mediatek;TRYSRCFIRST
+vendor/etc/init/android.hardware.media.c2-mediatek.rc
+vendor/etc/vintf/manifest/manifest_media_c2_default.xml
 vendor/lib/libcodec2_fsr.so
 vendor/lib/libcodec2_vpp_fa_plugin.so
 vendor/lib/libcodec2_vpp_mi_plugin.so
@@ -1723,6 +1734,42 @@ vendor/lib64/libcodec2_vpp_mi_plugin.so
 vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
 vendor/lib64/libformatter.so
+
+# Frozen AIDL libraries retained under compat SONAMEs for stock blobs
+#vendor/lib/android.hardware.graphics.common-V4-ndk.so
+#vendor/lib/android.hardware.graphics.common-V5-ndk.so
+#vendor/lib64/android.hardware.camera.common-V2-ndk.so
+#vendor/lib64/android.hardware.graphics.common-V4-ndk.so
+#vendor/lib64/android.hardware.graphics.common-V5-ndk.so
+
+# NFC / Secure Element
+vendor/bin/hw/android.hardware.nfc-service-st
+vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
+vendor/etc/libnfc-hal-st.conf
+vendor/etc/libnfc-nci.conf
+vendor/etc/st21nfc_conf.txt
+vendor/firmware/st21nfc_fw.bin
+vendor/firmware/st21nfc_fw7.bin
+vendor/lib64/nfc_nci.st21nfc.st.so
+odm/etc/init/iron_gl/android.hardware.secure_element@1.2-service-mediatek.rc
+odm/etc/init/iron_gl/init.stnfc.rc
+odm/etc/init/iron_gl/nfc-service-st.rc
+odm/etc/init/iron_p_gl/android.hardware.secure_element@1.2-service-mediatek.rc
+odm/etc/init/iron_p_gl/init.stnfc.rc
+odm/etc/init/iron_p_gl/nfc-service-st.rc
+odm/etc/permissions/sku_iron_gl/android.hardware.nfc.hce.xml
+odm/etc/permissions/sku_iron_gl/android.hardware.nfc.hcef.xml
+odm/etc/permissions/sku_iron_gl/android.hardware.nfc.uicc.xml
+odm/etc/permissions/sku_iron_gl/android.hardware.nfc.xml
+odm/etc/permissions/sku_iron_p_gl/android.hardware.nfc.hce.xml
+odm/etc/permissions/sku_iron_p_gl/android.hardware.nfc.hcef.xml
+odm/etc/permissions/sku_iron_p_gl/android.hardware.nfc.uicc.xml
+odm/etc/permissions/sku_iron_p_gl/android.hardware.nfc.xml
+odm/etc/vintf/manifest_iron_gl.xml
+odm/etc/vintf/manifest_iron_p_gl.xml
+
+# Audio parser used by the booting aurisys configuration
+vendor/lib64/libmtkspparser.so
 
 # MMAgent
 vendor/lib/vendor.mediatek.hardware.mmagent-V1-ndk.so
@@ -1821,6 +1868,7 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex.rcs-V2-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.rsu-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.se-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.sim-V2-ndk.so
+vendor/lib64/vendor.mediatek.hardware.mtkradioex.sim-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.smartratswitch-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.voice-V1-ndk.so
 
@@ -1842,13 +1890,15 @@ vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 
 # Sensors
-vendor/lib64/android.frameworks.sensorservice-V1-ndk.so:vendor/lib64/android.frameworks.sensorservice-V1-ndk-vendor-compat.so;FIX_SONAME
-vendor/lib64/android.hardware.sensors-V2-ndk.so:vendor/lib64/android.hardware.sensors-V2-ndk-vendor-compat.so;FIX_SONAME
+#vendor/lib64/android.frameworks.sensorservice-V1-ndk.so
+#vendor/lib64/android.hardware.sensors-V2-ndk.so
+#vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
 vendor/lib64/hw/sensors.mt6833.so
 vendor/lib64/libhfmanager.so
 vendor/lib64/libhfmanagerwrapper.so
 vendor/lib64/libhwm.so
 vendor/lib64/libsensor_custom.so
+vendor/lib64/sensors.touch.detect.so
 
 # Touchscreen
 vendor/firmware/focaltech_ts_fw_CSOT.bin
