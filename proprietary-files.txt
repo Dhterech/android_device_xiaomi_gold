@@ -1668,6 +1668,9 @@ vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.mitee.xm
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.mitee.xml
 
 # Picture Quality
+vendor/bin/hw/vendor.mediatek.hardware.pq_aidl-service
+vendor/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc
+vendor/etc/pq_flag.xml
 vendor/lib/libpq_sec.so
 vendor/lib/libpqhdrmetaparser.so
 vendor/lib/libpqsharememory.so
@@ -1685,8 +1688,10 @@ vendor/lib64/libpqsharememory.so
 vendor/lib64/libpqtuning.so
 vendor/lib64/libpqxmlparser.so
 vendor/lib64/libsdrparser.so
+vendor/lib64/hw/vendor.mediatek.hardware.pq_aidl-impl.so
 vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq_aidl-V4-ndk.so
+vendor/lib64/vendor.mediatek.hardware.pq_aidl-V7-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.10.so
