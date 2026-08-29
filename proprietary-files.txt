@@ -1610,8 +1610,10 @@ vendor/etc/slp_conf
 # Graphics
 vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek
 vendor/bin/hw/android.hardware.graphics.composer@3.3-service
+vendor/etc/gralloc/gpu.xml
 vendor/etc/init/android.hardware.graphics.allocator-V2-service-mediatek.rc
 vendor/etc/init/android.hardware.graphics.composer@3.3-service.rc
+vendor/etc/vintf/manifest/mapper.mediatek.xml
 vendor/lib/libged.so
 vendor/lib/libgralloc_extra.so
 vendor/lib/libion_mtk.so
@@ -1961,6 +1963,7 @@ vendor/etc/thermal-phone.conf
 vendor/etc/thermal-tgame.conf
 vendor/etc/thermal-video.conf
 vendor/etc/thermal-videochat.conf
+vendor/etc/thermal_info_config.json
 vendor/etc/thermald-devices.conf
 
 # WiFi
