@@ -283,9 +283,6 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += \
     #init.mt6833.thermal.rc
 
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
