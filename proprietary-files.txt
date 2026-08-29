@@ -1566,9 +1566,13 @@ vendor/bin/fuelgauged
 vendor/bin/fuelgauged_nvram
 vendor/etc/init/fuelgauged_init.rc
 vendor/etc/init/fuelgauged_nvram_init.rc
+vendor/lib/libfgauge_gm30.so
 vendor/lib64/libfgauge_gm30.so
 
 # Gatekeeper
+vendor/bin/hw/android.hardware.gatekeeper-service.mitee
+vendor/etc/init/android.hardware.gatekeeper-service.mitee.rc
+vendor/etc/vintf/manifest/android.hardware.gatekeeper-service.mitee.xml
 
 # GNSS
 vendor/bin/hw/android.hardware.gnss-service.mediatek
@@ -1963,7 +1967,7 @@ vendor/etc/thermal-phone.conf
 vendor/etc/thermal-tgame.conf
 vendor/etc/thermal-video.conf
 vendor/etc/thermal-videochat.conf
-vendor/etc/thermal_info_config.json
+#vendor/etc/thermal_info_config.json
 vendor/etc/thermald-devices.conf
 
 # WiFi

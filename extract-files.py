@@ -38,7 +38,7 @@ blob_fixups: blob_fixups_user_type = {
     # From device_xiaomi_duchamp
     'vendor/bin/hw/android.hardware.security.keymint@3.0-service.mitee': blob_fixup()
         .replace_needed(
-            'android.hardware.security.keymint-V3-ndk-v34.so',
+            'android.hardware.security.keymint-V3-ndk.so',
             'android.hardware.security.keymint-V3-ndk-prebuilt.so',
         ),
 
@@ -77,6 +77,26 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('__aeabi_memcpy')
         .clear_symbol_version('__aeabi_memset')
         .clear_symbol_version('__gnu_Unwind_Find_exidx'),
+
+    # libtinyxml
+    ('vendor/lib64/libsilkybrightnesscore.so',
+     'vendor/lib64/hw/vendor.mediatek.hardware.pq_aidl-impl.so',
+     'vendor/lib64/hw/hwcomposer.mtk_common.so',
+     'vendor/lib64/libpqxmlparser.so'): blob_fixup()
+        .replace_needed(
+            'libtinyxml2.so',
+            'libtinyxml2-v34.so',
+        ),
+
+    'vendor/lib64/hwcomposer.mtk_common.so': blob_fixup()
+        .add_needed('libprocessgroup_shim.so'),
+
+    # mtk pq
+    'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V7-ndk.so': blob_fixup()
+        .replace_needed('android.hardware.graphics.common-V4-ndk.so',
+        'android.hardware.graphics.common-V7-ndk.so')
+
+
 }  # fmt: skip
 
 module = ExtractUtilsModule(
