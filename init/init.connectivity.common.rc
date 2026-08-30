@@ -59,6 +59,11 @@ service gnss_daemon /vendor/bin/gnss_daemon
 on property:persist.vendor.em.dy.debug=1
     stop lbs_dbg
 
+on property:vendor.connsys.driver.ready=yes
+    insmod /vendor/lib/modules/wmt_chrdev_wifi.ko
+    insmod /vendor/lib/modules/wlan_drv_gen4m_6833.ko
+    start wlan_assistant
+
 #service BGW /vendor/bin/BGW
 #    user system
 #    group gps system radio
@@ -79,4 +84,3 @@ on property:persist.vendor.em.dy.debug=1
 #
 # Connectivity related services (End)
 #
-

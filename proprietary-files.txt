@@ -1546,6 +1546,7 @@ vendor/lib64/hw/consumerir.common.so
 # Connectivity
 vendor/bin/wmt_loader
 vendor/bin/wmt_launcher
+vendor/firmware/WMT_SOC.cfg
 vendor/firmware/soc2_2_ram_mcu_1a_1_hdr.bin
 vendor/firmware/soc2_2_ram_mcu_1_1_hdr.bin
 
