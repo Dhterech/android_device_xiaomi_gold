@@ -1323,6 +1323,10 @@ vendor/lib64/gc16b3_aac_front_mipi_raw_IdxMgr.so
 vendor/lib64/gc16b3_aac_front_mipi_raw_cn_IdxMgr.so
 vendor/lib64/gc16b3_sunny_front_mipi_raw_IdxMgr.so
 vendor/lib64/gc16b3_sunny_front_mipi_raw_cn_IdxMgr.so
+vendor/lib64/gc16b3_aac_front_mipi_raw_cn_tuning.so
+vendor/lib64/gc16b3_aac_front_mipi_raw_tuning.so
+vendor/lib64/gc16b3_sunny_front_mipi_raw_cn_tuning.so
+vendor/lib64/gc16b3_sunny_front_mipi_raw_tuning.so
 vendor/lib64/ov08d10_aac_ultra_mipi_raw_IdxMgr.so
 vendor/lib64/ov08d10_sunny_ultra_mipi_raw_IdxMgr.so
 vendor/lib64/ov08d10_aac_ultra_mipi_raw_tuning.so
