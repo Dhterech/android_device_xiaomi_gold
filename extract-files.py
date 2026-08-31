@@ -24,6 +24,12 @@ namespace_imports = [
 
 blob_fixups: blob_fixups_user_type = {
 
+    'vendor/lib64/hw/fingerprint.fpc.default.so': blob_fixup()
+        .binary_regex_replace(
+            br'fingerprint\.fpc\x00',
+            b'fingerprint\x00\x00\x00\x00\x00',
+        ),
+
     'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
         .replace_needed('libvendor.xiaomi.hardware.fx.tunnel@1.0.so', 'vendor.xiaomi.hardware.fx.tunnel@1.0.so'),
 
