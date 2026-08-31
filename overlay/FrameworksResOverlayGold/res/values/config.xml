@@ -387,4 +387,13 @@
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
+
+    <dimen name="rounded_corner_radius">70px</dimen>
+    <dimen name="rounded_corner_radius_bottom">70px</dimen>
+    <dimen name="rounded_corner_radius_top">70px</dimen>
+    <dimen name="status_bar_height_default">94px</dimen>
+    <dimen name="status_bar_height_portrait">94px</dimen>
+
+    <string name="config_mainBuiltInDisplayCutout">M 0,0 H -28 V 94 H 28 V 0 H 0 Z</string>
+    <string name="config_mainBuiltInDisplayCutoutRectApproximation">M 0,0 H -28 V 94 H 28 V 0 H 0 Z</string>
 </resources>
