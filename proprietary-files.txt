@@ -5,6 +5,29 @@ vendor/firmware/aw87xxx_acf.bin
 vendor/firmware/awinic_params.bin
 vendor/firmware/awinic_sinwave_params.bin
 vendor/firmware/sipa.bin
+vendor/lib/hw/audio.primary.mt6833.so
+vendor/lib/hw/audio.r_submix.mt6833.so
+vendor/lib/libMtkSpeechEnh.so
+vendor/lib/lib_iir.so
+vendor/lib/libaudio_param_parser-vnd.so
+vendor/lib/libaudiocompensationfilter_vendor.so
+vendor/lib/libaudiocompensationfilterc.so
+vendor/lib/libaudiocomponentengine_vendor.so
+vendor/lib/libaudiocomponentenginec.so
+vendor/lib/libaudiodcrflt_vendor.so
+vendor/lib/libaudiofmtconv.so
+vendor/lib/libaudioloudc.so
+vendor/lib/libaudiotoolkit_vendor.so
+vendor/lib/libaudiocustparam_vendor.so
+vendor/lib/libaudioprimarydevicehalifclient.so
+vendor/lib/libaurisysdemo.so
+vendor/lib/libbessound_hd_mtk_vendor.so
+vendor/lib/libblisrc32_vendor.so
+vendor/lib/libmisound.so
+vendor/lib/libmtklimiter_vendor.so
+vendor/lib/libmtkshifter_vendor.so
+vendor/lib/libspeechparser_vendor.so
+vendor/lib/hw/awinic.audio.effect.so;FIX_SONAME
 vendor/lib64/hw/audio.primary.mt6833.so
 vendor/lib64/hw/audio.r_submix.mt6833.so
 vendor/lib64/hw/awinic.audio.effect.so;FIX_SONAME
@@ -29,17 +52,21 @@ vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libmsbc_mtk.so
 vendor/lib64/libmtklimiter_vendor.so
 vendor/lib64/libmtkshifter_vendor.so
+vendor/lib64/libmisound.so
 vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/librt_extamp_intf.so
 vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/libxlog.so
+vendor/lib/libxlog.so
 vendor/lib/libaedv.so
 vendor/lib/libmisight.so
 vendor/lib64/libaedv.so
 vendor/lib64/libmisight.so
 
 # Audio (Configs)
+vendor/etc/aurisys_config.xml
+vendor/etc/aurisys_config_rv.xml
 vendor/etc/audio_param/AudioParamOptions.xml
 vendor/etc/audio_param/AudioParamOptions_vext.xml
 vendor/etc/audio_param/BtInfo_AudioParam.xml
@@ -48,6 +75,8 @@ vendor/etc/audio_param/CRSVolUI_AudioParam.xml
 vendor/etc/audio_param/CRSVolUI_ParamUnitDesc.xml
 vendor/etc/audio_param/CRSVol_AudioParam.xml
 vendor/etc/audio_param/CRSVol_ParamUnitDesc.xml
+vendor/etc/audio_param/Codec_AudioParam.xml
+vendor/etc/audio_param/Codec_ParamUnitDesc.xml
 vendor/etc/audio_param/HpImpedance_AudioParam.xml
 vendor/etc/audio_param/HpImpedance_ParamUnitDesc.xml
 vendor/etc/audio_param/MicInfo_AudioParam.xml
@@ -67,10 +96,14 @@ vendor/etc/audio_param/PlaybackVolUI_ParamUnitDesc.xml
 vendor/etc/audio_param/Playback_AudioParam.xml
 vendor/etc/audio_param/Playback_ParamTreeView.xml
 vendor/etc/audio_param/Playback_ParamUnitDesc.xml
+vendor/etc/audio_param/Power_AudioParam.xml
+vendor/etc/audio_param/Power_ParamUnitDesc.xml
 vendor/etc/audio_param/RecordDMNR_AudioParam.xml
 vendor/etc/audio_param/RecordDMNR_ParamUnitDesc.xml
 vendor/etc/audio_param/RecordFIR_AudioParam.xml
 vendor/etc/audio_param/RecordFIR_ParamUnitDesc.xml
+vendor/etc/audio_param/RecordGainBoost_AudioParam.xml
+vendor/etc/audio_param/RecordGainBoost_ParamUnitDesc.xml
 vendor/etc/audio_param/RecordUI_AudioParam.xml
 vendor/etc/audio_param/RecordUI_ParamUnitDesc.xml
 vendor/etc/audio_param/RecordVolUI_AudioParam.xml
@@ -88,10 +121,14 @@ vendor/etc/audio_param/SmartPa_AudioParam.xml
 vendor/etc/audio_param/SmartPa_ParamUnitDesc.xml
 vendor/etc/audio_param/SoundEnhancement_AudioParam.xml
 vendor/etc/audio_param/SoundEnhancement_ParamUnitDesc.xml
+vendor/etc/audio_param/SpeechAcousticShock_AudioParam.xml
+vendor/etc/audio_param/SpeechAcousticShock_ParamUnitDesc.xml
 vendor/etc/audio_param/SpeechDMNR_AudioParam.xml
 vendor/etc/audio_param/SpeechDMNR_ParamUnitDesc.xml
 vendor/etc/audio_param/SpeechEchoRef_AudioParam.xml
 vendor/etc/audio_param/SpeechEchoRef_ParamUnitDesc.xml
+vendor/etc/audio_param/SpeechGainBoost_AudioParam.xml
+vendor/etc/audio_param/SpeechGainBoost_ParamUnitDesc.xml
 vendor/etc/audio_param/SpeechGeneral_AudioParam.xml
 vendor/etc/audio_param/SpeechGeneral_ParamUnitDesc.xml
 vendor/etc/audio_param/SpeechMagiClarity_AudioParam.xml
@@ -130,6 +167,8 @@ vendor/etc/audio_param/VoIP_ParamTreeView.xml
 vendor/etc/audio_param/VoIP_ParamUnitDesc.xml
 vendor/etc/audio_param/VoIPv2DMNR_AudioParam.xml
 vendor/etc/audio_param/VoIPv2DMNR_ParamUnitDesc.xml
+vendor/etc/audio_param/VoIPv2GainBoost_AudioParam.xml
+vendor/etc/audio_param/VoIPv2GainBoost_ParamUnitDesc.xml
 vendor/etc/audio_param/VoIPv2General_AudioParam.xml
 vendor/etc/audio_param/VoIPv2General_ParamUnitDesc.xml
 vendor/etc/audio_param/VoIPv2UI_AudioParam.xml
@@ -137,6 +176,10 @@ vendor/etc/audio_param/VoIPv2UI_ParamUnitDesc.xml
 vendor/etc/audio_param/VoIPv2_AudioParam.xml
 vendor/etc/audio_param/VoIPv2_ParamTreeView.xml
 vendor/etc/audio_param/VoIPv2_ParamUnitDesc.xml
+vendor/etc/audio_param/VoWCommonSetting_AudioParam.xml
+vendor/etc/audio_param/VoWCommonSetting_ParamUnitDesc.xml
+vendor/etc/audio_param/VoWCompatibilityCode_AudioParam.xml
+vendor/etc/audio_param/VoWCompatibilityCode_ParamUnitDesc.xml
 vendor/etc/audio_param/VoWDspAec_AudioParam.xml
 vendor/etc/audio_param/VoWDspAec_ParamUnitDesc.xml
 vendor/etc/audio_param/VoWEngineFeature_AudioParam.xml
@@ -161,6 +204,8 @@ vendor/etc/audio_param_ce/CRSVolUI_AudioParam.xml
 vendor/etc/audio_param_ce/CRSVolUI_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/CRSVol_AudioParam.xml
 vendor/etc/audio_param_ce/CRSVol_ParamUnitDesc.xml
+vendor/etc/audio_param_ce/Codec_AudioParam.xml
+vendor/etc/audio_param_ce/Codec_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/HpImpedance_AudioParam.xml
 vendor/etc/audio_param_ce/HpImpedance_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/MicInfo_AudioParam.xml
@@ -180,10 +225,14 @@ vendor/etc/audio_param_ce/PlaybackVolUI_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/Playback_AudioParam.xml
 vendor/etc/audio_param_ce/Playback_ParamTreeView.xml
 vendor/etc/audio_param_ce/Playback_ParamUnitDesc.xml
+vendor/etc/audio_param_ce/Power_AudioParam.xml
+vendor/etc/audio_param_ce/Power_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/RecordDMNR_AudioParam.xml
 vendor/etc/audio_param_ce/RecordDMNR_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/RecordFIR_AudioParam.xml
 vendor/etc/audio_param_ce/RecordFIR_ParamUnitDesc.xml
+vendor/etc/audio_param_ce/RecordGainBoost_AudioParam.xml
+vendor/etc/audio_param_ce/RecordGainBoost_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/RecordUI_AudioParam.xml
 vendor/etc/audio_param_ce/RecordUI_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/RecordVolUI_AudioParam.xml
@@ -201,10 +250,14 @@ vendor/etc/audio_param_ce/SmartPa_AudioParam.xml
 vendor/etc/audio_param_ce/SmartPa_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/SoundEnhancement_AudioParam.xml
 vendor/etc/audio_param_ce/SoundEnhancement_ParamUnitDesc.xml
+vendor/etc/audio_param_ce/SpeechAcousticShock_AudioParam.xml
+vendor/etc/audio_param_ce/SpeechAcousticShock_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/SpeechDMNR_AudioParam.xml
 vendor/etc/audio_param_ce/SpeechDMNR_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/SpeechEchoRef_AudioParam.xml
 vendor/etc/audio_param_ce/SpeechEchoRef_ParamUnitDesc.xml
+vendor/etc/audio_param_ce/SpeechGainBoost_AudioParam.xml
+vendor/etc/audio_param_ce/SpeechGainBoost_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/SpeechGeneral_AudioParam.xml
 vendor/etc/audio_param_ce/SpeechGeneral_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/SpeechMagiClarity_AudioParam.xml
@@ -243,6 +296,8 @@ vendor/etc/audio_param_ce/VoIP_ParamTreeView.xml
 vendor/etc/audio_param_ce/VoIP_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/VoIPv2DMNR_AudioParam.xml
 vendor/etc/audio_param_ce/VoIPv2DMNR_ParamUnitDesc.xml
+vendor/etc/audio_param_ce/VoIPv2GainBoost_AudioParam.xml
+vendor/etc/audio_param_ce/VoIPv2GainBoost_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/VoIPv2General_AudioParam.xml
 vendor/etc/audio_param_ce/VoIPv2General_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/VoIPv2UI_AudioParam.xml
@@ -250,6 +305,10 @@ vendor/etc/audio_param_ce/VoIPv2UI_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/VoIPv2_AudioParam.xml
 vendor/etc/audio_param_ce/VoIPv2_ParamTreeView.xml
 vendor/etc/audio_param_ce/VoIPv2_ParamUnitDesc.xml
+vendor/etc/audio_param_ce/VoWCommonSetting_AudioParam.xml
+vendor/etc/audio_param_ce/VoWCommonSetting_ParamUnitDesc.xml
+vendor/etc/audio_param_ce/VoWCompatibilityCode_AudioParam.xml
+vendor/etc/audio_param_ce/VoWCompatibilityCode_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/VoWDspAec_AudioParam.xml
 vendor/etc/audio_param_ce/VoWDspAec_ParamUnitDesc.xml
 vendor/etc/audio_param_ce/VoWEngineFeature_AudioParam.xml
@@ -274,6 +333,8 @@ vendor/lib64/libbluetooth_audio_session_aidl_mtk.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbt-vendor.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
+vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Bluetooth (Firmware)
 vendor/firmware/BT_FW.cfg
@@ -1739,6 +1800,8 @@ vendor/lib/libvpudv3a_vcodec.so
 # Media (Codec2)
 vendor/bin/hw/android.hardware.media.c2-mediatek-64b:vendor/bin/hw/android.hardware.media.c2-mediatek;TRYSRCFIRST
 vendor/etc/init/android.hardware.media.c2-mediatek.rc
+vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy
+vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
 vendor/etc/vintf/manifest/manifest_media_c2_default.xml
 vendor/lib/libcodec2_fsr.so
 vendor/lib/libcodec2_vpp_fa_plugin.so
@@ -1787,6 +1850,7 @@ odm/etc/vintf/manifest_iron_gl.xml
 odm/etc/vintf/manifest_iron_p_gl.xml
 
 # Audio parser used by the booting aurisys configuration
+vendor/lib/libmtkspparser.so
 vendor/lib64/libmtkspparser.so
 
 # MMAgent
@@ -1822,6 +1886,8 @@ vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
 # NVRAM
 vendor/bin/nvram_daemon
 vendor/etc/init/nvram_daemon.rc
+vendor/lib/libnvram.so
+vendor/lib/libnvram_sec.so
 vendor/lib64/libconnfem.so
 vendor/lib64/libcustom_nvram.so
 vendor/lib64/libfile_op.so
