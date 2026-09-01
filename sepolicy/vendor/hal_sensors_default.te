@@ -1,0 +1,4 @@
+# The executable transition is supplied by hal_sensors_default_exec in
+# file_contexts. The common AOSP HAL policy supplies its Binder and service
+# manager permissions.
+r_dir_file(hal_sensors_default, gold_sysfs_display)

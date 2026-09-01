@@ -1,0 +1,28 @@
+# DMA-BUF pseudo filesystem. Without a filesystem label, app rendering emits
+# unlabeled filesystem denials.
+genfscon dmabuf / u:object_r:gold_dmabuf_fs:s0
+
+# Side fingerprint sensor controls.
+genfscon sysfs /devices/platform/fingerprint u:object_r:gold_sysfs_fingerprint:s0
+
+# Standalone charge-pump power supply queried by the health HAL.
+genfscon sysfs /devices/platform/11e02000.i2c/i2c-7/7-0066/power_supply/sc-cp-standalone u:object_r:gold_sysfs_charger:s0
+genfscon sysfs /devices/platform/11e01000.i2c/i2c-5/5-0034/mt6360-chg.2.auto u:object_r:gold_sysfs_charger:s0
+
+# Wakeup-source names are consumed by the platform system_suspend service.
+genfscon sysfs /devices/platform/charger/power_supply/usb/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11e01000.i2c/i2c-5/5-0034/mt6360-chg.2.auto/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11e02000.i2c/i2c-7/7-0066/power_supply/sc-cp-standalone/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/fingerprint/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/10026000.pwrap/10026000.pwrap:mt6359p/mt6359p-rtc/rtc/rtc0/alarmtimer.0.auto/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/power_supply/batt_verify/wakeup u:object_r:sysfs_wakeup:s0
+
+# Smart amplifier calibration data.
+genfscon sysfs /devices/platform/11e02000.i2c/i2c-7/7-005b/vmax u:object_r:gold_sysfs_audio_amp:s0
+
+# Display panel state exposed to PQ and composer.
+genfscon sysfs /devices/platform/14013000.dsi/14013000.dsi.0/panel_event u:object_r:gold_sysfs_display:s0
+genfscon sysfs /devices/virtual/mi_display/disp_feature/disp-DSI-0 u:object_r:gold_sysfs_display:s0
+
+# Board identification queried by the NVRAM service.
+genfscon sysfs /devices/virtual/huaqin/interface/hw_info u:object_r:gold_sysfs_hwinfo:s0

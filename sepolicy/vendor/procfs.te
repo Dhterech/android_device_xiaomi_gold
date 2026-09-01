@@ -1,0 +1,6 @@
+# MediaTek's vendor proc labels are attached to entries on the proc
+# filesystem. Newer platform policy no longer grants this implicitly.
+allow {
+    proc_cpufreq
+    proc_ppm
+} proc:filesystem associate;

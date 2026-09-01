@@ -198,7 +198,7 @@ on property:sys.tp.grip_enable=270
 #on property:vendor.boot.hwc=Global
 on property:ro.boot.hwc=IN
     write /sys/class/power_supply/battery/cid_enable 1
-on property:persist.audio.usb_cctoggle=1
+on property:persist.vendor.audio.usb_cctoggle=1
     write /sys/class/power_supply/battery/audio_on 1
-on property:persist.audio.usb_cctoggle=0
+on property:persist.vendor.audio.usb_cctoggle=0
     write /sys/class/power_supply/battery/audio_on 0

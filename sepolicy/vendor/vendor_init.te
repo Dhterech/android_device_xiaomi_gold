@@ -1,0 +1,5 @@
+# Set ownership and mode on kernel event device.
+allow vendor_init gold_miev_device:chr_file { getattr setattr };
+
+# Device power defaults written by init.project.rc.
+allow vendor_init proc_ppm:file w_file_perms;

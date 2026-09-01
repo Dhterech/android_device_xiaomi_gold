@@ -1,0 +1,3 @@
+persist.camera.dualcal.state u:object_r:system_gold_camera_runtime_prop:s0 exact string
+ro.mtk_cam_dualzoom_support u:object_r:system_gold_camera_config_prop:s0 exact bool
+ro.mtk_cam_stereo_camera_support u:object_r:system_gold_camera_config_prop:s0 exact bool

@@ -1,0 +1,5 @@
+# Runtime state written by the proprietary camera HAL.
+system_public_prop(system_gold_camera_runtime_prop)
+
+# Read-only camera configuration supplied by vendor_init during boot.
+system_vendor_config_prop(system_gold_camera_config_prop)

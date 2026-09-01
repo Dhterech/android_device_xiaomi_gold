@@ -1,0 +1,23 @@
+# FPC sensor control nodes.
+allow hal_fingerprint_default gold_sysfs_fingerprint:dir r_dir_perms;
+allow hal_fingerprint_default gold_sysfs_fingerprint:file rw_file_perms;
+
+# The legacy module probes modalias files to discover its transport.
+allow hal_fingerprint_default {
+    mtee_trusty_file
+    sysfs_batteryinfo
+    sysfs_dvfsrc_dbg
+    sysfs_extcon
+    sysfs_pmu
+    sysfs_rtc
+}:dir search;
+allow hal_fingerprint_default {
+    mtee_trusty_file
+    sysfs_batteryinfo
+    sysfs_dvfsrc_dbg
+    sysfs_extcon
+    sysfs_pmu
+    sysfs_rtc
+}:file r_file_perms;
+
+set_prop(hal_fingerprint_default, vendor_gold_fingerprint_prop)
