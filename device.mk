@@ -220,6 +220,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    SystemUIOverlayGold \
     FrameworkResOverlayGold \
     TetheringConfigOverlay \
     SettingsResOverlayGold \
