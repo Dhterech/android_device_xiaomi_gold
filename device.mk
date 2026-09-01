@@ -178,6 +178,10 @@ PRODUCT_PACKAGES += \
     init.recovery.mt6833.rc \
     ueventd.mtk.rc
 
+# Tethering offload
+PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload-V1-service.rc
+
 
 # ?
 PRODUCT_PACKAGES += \
@@ -250,6 +254,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     mdota_symlink \
     init.modem.rc
+
+# MediaTek framework classes used by the proprietary IMS service.
+$(call inherit-product, hardware/mediatek/frameworks/mediatek-frameworks.mk)
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
