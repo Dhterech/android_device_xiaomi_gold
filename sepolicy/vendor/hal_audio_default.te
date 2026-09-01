@@ -1,1 +1,4 @@
 r_dir_file(hal_audio_default, gold_sysfs_audio_amp)
+
+# MediaTek's audio HAL writes playback state to the MI event device.
+allow hal_audio_default gold_miev_device:chr_file { open write };

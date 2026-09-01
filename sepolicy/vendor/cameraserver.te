@@ -1,0 +1,2 @@
+# CameraService checks this vendor-owned allowlist when opening a camera.
+get_prop(cameraserver, vendor_gold_camera_prop)

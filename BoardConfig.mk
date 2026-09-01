@@ -79,10 +79,7 @@ TARGET_KERNEL_CONFIG := \
 	gki_defconfig \
 	gold.config
 
-# Bootable transition bundle. Keep the kernel, DTB, DTBO and vendor modules
-# from the same 6.6.118 Gold OTA until the in-tree MT6833 clock/power/module
-# dependency closure is complete. TARGET_KERNEL_SOURCE above deliberately
-# points at the real 6.6 port instead of the old nonexistent headers path.
+# Keep the kernel, DTB, DTBO and vendor modules fom stock until the in-tree MT6833 clock/power/module
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
@@ -156,7 +153,8 @@ TARGET_BOARD_PLATFORM := mt6833
 BOARD_SHIPPING_API_LEVEL := 30
 
 # Props
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/prop/vendor.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/prop/product.prop
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888

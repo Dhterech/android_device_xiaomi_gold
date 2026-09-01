@@ -14,6 +14,8 @@ genfscon sysfs /devices/platform/charger/power_supply/usb/wakeup u:object_r:sysf
 genfscon sysfs /devices/platform/11e01000.i2c/i2c-5/5-0034/mt6360-chg.2.auto/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11e02000.i2c/i2c-7/7-0066/power_supply/sc-cp-standalone/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/fingerprint/wakeup u:object_r:sysfs_wakeup:s0
+# "wakeup" above is a prefix match, so override the adjacent FPC control file.
+genfscon sysfs /devices/platform/fingerprint/wakeup_enable u:object_r:gold_sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/10026000.pwrap/10026000.pwrap:mt6359p/mt6359p-rtc/rtc/rtc0/alarmtimer.0.auto/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/power_supply/batt_verify/wakeup u:object_r:sysfs_wakeup:s0
 
