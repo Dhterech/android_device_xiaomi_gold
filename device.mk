@@ -248,6 +248,7 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, hardware/mediatek/frameworks/mediatek-frameworks.mk)
 
 # AOSP compatible MediaTek IMS service and framework/telephony overlays.
+# from techyminati/android_vendor_mediatek_ims
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
 
 PRODUCT_COPY_FILES += \

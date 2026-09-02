@@ -271,11 +271,11 @@ ro.vendor.vt.mtk_thin_md_support_mode=0
 ro.vendor.md_auto_setup_ims=1
 persist.vendor.ims_support=1
 persist.vendor.mtk_dynamic_ims_switch=1
-persist.vendor.mtk_wfc_support=1
+persist.vendor.mtk_wfc_support=0
 persist.vendor.volte_support=1
 persist.vendor.mtk.volte.enable=1
-persist.vendor.vilte_support=1
-persist.vendor.viwifi_support=1
+persist.vendor.vilte_support=0
+persist.vendor.viwifi_support=0
 
 # TEE
 ro.vendor.mtk_tee_gp_support=1
