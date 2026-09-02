@@ -3,3 +3,6 @@ on init
     write /dev/cpuset/background/cpus 0-3
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/top-app/cpus 0-7
+
+on late-init
+    setprop vendor.powerhal.init 1
