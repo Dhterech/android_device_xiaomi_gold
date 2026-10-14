@@ -3,3 +3,10 @@ typeattribute hal_power_default mlstrustedsubject;
 
 allow hal_power_default self:capability sys_nice;
 allow hal_power_default appdomain:process { getsched setsched };
+
+# Double tap to wake is switched by writing to the touchscreen input device.
+allow hal_power_default input_device:dir r_dir_perms;
+allow hal_power_default input_device:chr_file rw_file_perms;
+
+# The service registers for notifications, which servicemanager delivers by calling back.
+binder_call(servicemanager, hal_power_default)
